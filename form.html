@@ -7,14 +7,20 @@
 body {
   background: url(brillant.png);
   overflow-x: hidden;
+  max-width: 800px;
+  min-width: 600px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: left;
 }
 
 p {
-
   font-family: sans-serif;
   font-size: 12px;
   padding: 0px;
-
+  text-align: right;
 }
 
 ul.img-list {
@@ -76,14 +82,12 @@ ul.img-list li:hover img {
   opacity: 1;
 }
 
-
 .menu {
   color: black;
   font-family: sans-serif;
   font-size: 11px;
   text-align: right;
 }
-
 
 a:link {
     color: black;
@@ -116,28 +120,21 @@ a:active {
 </head>
 
 <body style="margin:40px;">
+  <div class="header">
   <img src="PublicWorks_logo.png" width="70">
+  </div>
+
   <div class="menu"><a href="index.html">What do we do</a></div>
   <hr>
   <br />
   <p>
-   Public Works is a design and research studio that considers these two domains of knowledge as complementary practices. The collective is initiated by an architect (Abir Saksouk) and a graphic designer (Nadine Bekdache) who have overlaid their respective design disciplines with the study of urbanism. Together, along with a network of individuals - scholars, activists, architects, designers, artists, planners, and users – seek to engage critically and politically in a wide range of urban and public issues, within a common work environment. As architects and urban planners, we aim to produce socially inclusive and sustainable places. As graphic designers, we approach the discipline as producers of socially conscious new knowledge. 
-  </p>
-  <p>
-   The studio offers professional services through design applications, consultancy, and urban research. It also aspires to function as a common space of discussion, exchange, and engagement. Our previous involvement in research projects, as well as our personal experiences, testify to a major rift between the inclusiveness and equality we strive for and the harsh realities of urban politics. Practices such as the privatization of the Lebanese coast, the ongoing eviction of the city’s residents, the marginalization of rural areas, and the construction of boundaries around Palestinian refugee camps as well as low-income neighborhoods, have intensified  our determination to be actively involved in the future of our cities, villages and natural landscapes.
-  </p>
-  <p>
-   Faith in change is the underlying backdrop to this initiative. Its aim is to spur thinking on the interface between social practices, representations and the built environment, in the context of spatial injustices in Lebanon.
-  </p>
-  <p>
-   The studio’s resources include a network of architects, designers, urbanists, historians, illustrators, writers, filmmakers, journalists, animators and artists. As part of Public Work's research methodology, it revisits studies by students, scholars and other collectives, as well as rely on various methods to produce knowledge about urban issues: oral history, archival research, interviews, documentation, mapping practices, spatial analysis, legal analysis, film, photography and interventions in space. Its productions include buildings, publications, maps, visual identities, animations, campaigns and more. Moreover, it conducts workshops, talks, and seminars as both a research methodology and as a platform to influence public discourse. Its engagement extends to social media platforms, translation activities, and publishing under a Creative Commons license.
-  </p>
-  <p>
-  <strong>Contact</strong><br/>
-  E: info@publicworksstudio.com<br/>
-  T: 01567205<br/>
-  A: Beirut, Gemayze Street, Art Lab building, 4th floor<br/>
-  
+  <form style="text-align: right;" action="demo_form.asp" method="get">
+  الإسم الكامل: <input type="text" name="fname"><br>
+  شي تاني: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit">
+  </form>
+
+
   </p>
 
 </body>
