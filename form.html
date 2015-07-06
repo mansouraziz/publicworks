@@ -117,6 +117,24 @@ a:active {
 }
 
 </style>
+<script type="application/ecmascript">
+  function area_click(evt) {
+    var object = evt.target;
+    /* Set value for hidden input location */
+    document.getElementById("location").value = object.id;
+    /* reset the color; can be selected by class or so later */
+    document.getElementById("Area1").setAttribute("fill","#FF0000");
+    document.getElementById("Area2").setAttribute("fill","#FF0000");
+    document.getElementById("Area3").setAttribute("fill","#FF0000");
+    document.getElementById("Area4").setAttribute("fill","#FF0000");
+    document.getElementById("Area5").setAttribute("fill","#FF0000");
+    document.getElementById("Area6").setAttribute("fill","#FF0000");
+    document.getElementById("Area7").setAttribute("fill","#FF0000");
+    /* mark current */
+    object.setAttribute("fill","#000000");
+  }
+</script>
+
 </head>
 
 <body style="margin:40px;">
@@ -128,9 +146,108 @@ a:active {
   <hr>
   <br />
   <p>
-  <form style="text-align: right;" action="demo_form.asp" method="get">
+
+  <form style="text-align: right;" action="submit.php" method="get">
   الإسم الكامل: <input type="text" name="fname"><br>
   شي تاني: <input type="text" name="lname"><br>
+    <input type="hidden" name="location" id="location" value=""/>
+    <div style="position: relative; left: 0; top: 0;">
+    <img src="ACSS map for web.svg" style="position: absolute; top: 0px; left: 0px;z-index:-500;"/> 
+    <!--<img src="BeirutMap.svg" style="position: absolute; top: 0px; left: 0px;z-index:-500;"/>-->
+    <img style="position: relative; top: 0; left: 0;">
+
+    <svg
+
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+
+   xmlns:cc="http://creativecommons.org/ns#"
+
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+   xmlns:svg="http://www.w3.org/2000/svg"
+
+   xmlns="http://www.w3.org/2000/svg"
+
+   version="1.1"
+
+   width="1360.63"
+
+   height="907.08698"
+
+   viewBox="0 0 1360.63 907.087"
+
+   id="svg2985"
+
+   xml:space="preserve"><metadata
+
+     id="metadata9508"><rdf:RDF><cc:Work
+
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+
+     id="defs9506" /><g
+
+     id="layer1"><path onclick="area_click(evt)" fill="#FF0000"
+
+       d="m 388,450.08698 a 42,41 0 1 1 -84,0 42,41 0 1 1 84,0 z"
+
+       transform="matrix(0.42857142,0,0,1,197.71427,0)"
+
+       id="Area6"
+
+       style="opacity:0.28395063;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path onclick="area_click(evt)" fill="#FF0000"
+
+       d="m 676,456.08698 a 60,51 0 1 1 -120,0 60,51 0 1 1 120,0 z"
+
+       transform="matrix(0.81666666,0,0,0.74509803,117.93332,117.25747)"
+
+       id="Area2"
+
+       style="opacity:0.28395063;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path onclick="area_click(evt)" fill="#FF0000"
+
+       d="m 1038,849.08698 a 61,48 0 1 1 -122,0 61,48 0 1 1 122,0 z"
+
+       transform="translate(-2.1118158e-5,0)"
+
+       id="Area5"
+
+       style="opacity:0.28395063;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path onclick="area_click(evt)" fill="#FF0000"
+
+       d="m 786,663.08698 a 93,58 0 1 1 -186,0 93,58 0 1 1 186,0 z"
+
+       transform="matrix(1.0845868,0.29470956,-0.20352217,1.2278743,66.33428,-355.33429)"
+
+       id="Area4"
+
+       style="opacity:0.28395063;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g><path onclick="area_click(evt)" fill="#FF0000"
+
+     d="m 1134,213.08698 a 31,18 0 1 1 -62,0 31,18 0 1 1 62,0 z"
+
+     transform="translate(-3.6434189,8.7249788)"
+
+     id="Area7"
+
+     style="opacity:0.28395063;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path onclick="area_click(evt)" fill="#FF0000"
+
+     d="m 1115.1186,320.78189 a 62.372883,36.338985 0 1 1 -124.74576,0 62.372883,36.338985 0 1 1 124.74576,0 z"
+
+     transform="matrix(1.1197843,-0.44427832,0.45895326,1.0839795,-270.61447,438.06115)"
+
+     id="Area1"
+
+     style="opacity:0.28395063;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path onclick="area_click(evt)" fill="#FF0000"
+
+     d="m 1213.3517,380.98529 a 40.19915,48.81356 0 1 1 -80.3983,0 40.19915,48.81356 0 1 1 80.3983,0 z"
+
+     transform="matrix(1.0874681,0.52658535,-1.0883239,2.0351138,328.83545,-1026.7722)"
+
+     id="Area3"
+
+     style="opacity:0.28395063;fill-opacity:1;fill-rule:nonzero;stroke:none" /></svg>
+
+    </img>
+  </dev>
   <input type="submit" value="Submit">
   </form>
 
