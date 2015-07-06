@@ -121,7 +121,7 @@ a:active {
   function area_click(evt) {
     var object = evt.target;
     /* Set value for hidden input location */
-    document.getElementById("location").value = object.id;
+    document.getElementById(object.id + "radio").checked = true ; // = object.id;
     /* reset the color; can be selected by class or so later */
     document.getElementById("Area1").setAttribute("fill","#FF0000");
     document.getElementById("Area2").setAttribute("fill","#FF0000");
@@ -147,10 +147,99 @@ a:active {
   <br />
   <p>
 
-  <form style="text-align: right;" action="submit.php" method="get">
-  الإسم الكامل: <input type="text" name="fname"><br>
-  شي تاني: <input type="text" name="lname"><br>
-    <input type="hidden" name="location" id="location" value=""/>
+  <form style="text-align: right;" action="submit.php" method="get" class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend></legend>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput-0"></label>
+  <div class="controls">
+    <input id="textinput-0" name="textinput-0" type="text" placeholder="الاسم والشهرة" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput-1"></label>
+  <div class="controls">
+    <input id="textinput-1" name="textinput-1" type="text" placeholder="العمر" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput-2"></label>
+  <div class="controls">
+    <input id="textinput-2" name="textinput-2" type="text" placeholder="مكان السكن" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput-3"></label>
+  <div class="controls">
+    <input id="textinput-3" name="textinput-3" type="text" placeholder="الإختصاص/ المهنة" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput-4"></label>
+  <div class="controls">
+    <input id="textinput-4" name="textinput-4" type="text" placeholder="التعليم (الكلية والجامعة)" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="control-group">
+  <label class="control-label" for="textarea-0">ما الذي يثير إهتمامك في الورشة وما الحافز للمشاركة؟</label>
+  <div class="controls">                     
+    <textarea id="textarea-0" name="textarea-0">ما الذي يثير إهتمامك في الورشة وما الحافز للمشاركة؟</textarea>
+  </div>
+</div>
+
+<!-- Multiple Radios -->
+<div class="control-group">
+  <label class="control-label" for="multipleradios-0">إختر واحدة من ورش العمل المقسمة بحسب الأحياء:</label>
+  <div class="controls">
+    <label class="radio" for="multipleradios-0-0">
+      <input type="radio" name="multipleradios-0" id="Area1radio" value="حي الروم/ مار مخايل - جلسات الورشة:  ٣ / ٧ / ١١ / ١٢ آب (أغسطس) ٢٠١٥" checked="checked">
+      حي الروم/ مار مخايل - جلسات الورشة:  ٣ / ٧ / ١١ / ١٢ آب (أغسطس) ٢٠١٥
+    </label>
+    <label class="radio" for="multipleradios-0-1">
+      <input type="radio" name="multipleradios-0" id="Area2radio" value="مصيطبة - جلسات الورشة: ٣ / ٧ / ١٠ / ١١ أيلول (سبتمبر) ٢٠١٥">
+      مصيطبة - جلسات الورشة: ٣ / ٧ / ١٠ / ١١ أيلول (سبتمبر) ٢٠١٥
+    </label>
+    <label class="radio" for="multipleradios-0-2">
+      <input type="radio" name="multipleradios-0" id="Area3radio" value="حي السكة - جلسات الورشة: ٣ / ١٠ / ١٧ / ١٨ تشرين الأول (أكتوبر) ٢٠١٥">
+      حي السكة - جلسات الورشة: ٣ / ١٠ / ١٧ / ١٨ تشرين الأول (أكتوبر) ٢٠١٥
+    </label>
+    <label class="radio" for="multipleradios-0-3">
+      <input type="radio" name="multipleradios-0" id="Area4radio" value="طريق الجديدة / ملعب البلدي - جلسات الورشة: ٧ / ١٤ / ٢١ / ٢٢ تشرين الثاني (نوفمبر) ٢٠١٥">
+      طريق الجديدة / ملعب البلدي - جلسات الورشة: ٧ / ١٤ / ٢١ / ٢٢ تشرين الثاني (نوفمبر) ٢٠١٥
+    </label>
+    <label class="radio" for="multipleradios-0-4">
+      <input type="radio" name="multipleradios-0" id="Area5radio" value="عين الرمانة / شياح - جلسات الورشة: ٦ / ١٣ / ٢٠ / ٢١ شباط (فبراير) ٢٠١٦">
+      عين الرمانة / شياح - جلسات الورشة: ٦ / ١٣ / ٢٠ / ٢١ شباط (فبراير) ٢٠١٦
+    </label>
+    <label class="radio" for="multipleradios-0-5">
+      <input type="radio" name="multipleradios-0" id="Area6radio" value="كتل سكنية متفرقة ضمن أحياء: الكارنتينا، بيضون، عين التينة، بسطة - جلسات الورشة: ٥ / ١٢ / ١٩/ ٢٠  آذار (مارس) ٢٠١٦">
+      كتل سكنية متفرقة ضمن أحياء: الكارنتينا، بيضون، عين التينة، بسطة - جلسات الورشة: ٥ / ١٢ / ١٩/ ٢٠  آذار (مارس) ٢٠١٦
+    </label>
+  </div>
+</div>
+
+</fieldset>
+
+</fieldset>
     <div style="position: relative; left: 0; top: 0;">
     <img src="ACSS map for web.svg" style="position: absolute; top: 0px; left: 0px;z-index:-500;"/> 
     <!--<img src="BeirutMap.svg" style="position: absolute; top: 0px; left: 0px;z-index:-500;"/>-->
