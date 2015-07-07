@@ -277,19 +277,19 @@ a:active {
 
   <form style="text-align: right;" action="submit.php" method="get" class="form-horizontal">
 
-<p>الاسم والشهرة <input>
+<p>الاسم والشهرة <input name="name">
   </p>
 
 <p>العمر 
-<input></p>
+<input name="age"></p>
 
-<p>مكان السكن <input></p>
-
-<p>
-الإختصاص/ المهنة <input></p>
+<p>مكان السكن <input name="addr"></p>
 
 <p>
-التعليم (الكلية والجامعة)<input></p>
+الإختصاص/ المهنة <input name="job"></p>
+
+<p>
+التعليم (الكلية والجامعة)<input name="edu"></p>
 
 <br><br>
 ما الذي يثير إهتمامك في الورشة وما الحافز للمشاركة؟<br>
@@ -1143,7 +1143,7 @@ a:active {
 اختر الورشة
 <br>
 
-<input onclick="radio_click(evt)" id="Area1radio" type="radio" name="AreaRadio">
+<input onclick="radio_click(evt)" id="Area1radio" type="radio" name="AreaRadio" value="Area1">
 
 حي الروم/ مار مخايل
 <br>
@@ -1152,7 +1152,7 @@ a:active {
 </div>
 
 
-<input id="Area2radio" type="radio">مصيطبة
+<input onclick="area_click(evt)" onmouseover="this.style.stroke = '#ff0000'; this.style['stroke-width'] = 5;" onmouseout="this.style.stroke = '#000000'; this.style['stroke-width'] = 0;" id="Area2radio" type="radio" name="AreaRadio" value="Area2">مصيطبة
 <br>
 <div id="dates">
 جلسات الورشة: ٣ / ٧ / ١٠ / ١١ أيلول (سبتمبر) ٢٠١٥
@@ -1161,27 +1161,27 @@ a:active {
 
 
 
-<input onclick="radio_click(evt)" id="Area3radio" type="radio" name="AreaRadio">حي السكة
+<input onclick="radio_click(evt)" id="Area3radio" type="radio" name="AreaRadio" value="Area3">حي السكة
 <div id="dates">
 جلسات الورشة: ٣ / ١٠ / ١٧ / ١٨ تشرين الأول (أكتوبر) ٢٠١٥
 </div>
 
 
 
-<input onclick="radio_click(evt)" id="Area4radio" type="radio" name="AreaRadio">طريق الجديدة / ملعب البلدي
+<input onclick="radio_click(evt)" id="Area4radio" type="radio" name="AreaRadio" value="Area4">طريق الجديدة / ملعب البلدي
 <div id="dates">
 جلسات الورشة: ٧ / ١٤ / ٢١ / ٢٢ تشرين الثاني (نوفمبر) ٢٠١٥
 </div>
 
 
-<input onclick="radio_click(evt)" id="Area5radio" type="radio" name="AreaRadio">عين الرمانة / شياح
+<input onclick="radio_click(evt)" id="Area5radio" type="radio" name="AreaRadio" value="Area5">عين الرمانة / شياح
 <div id="dates">
 جلسات الورشة: ٦ / ١٣ / ٢٠ / ٢١ شباط (فبراير) ٢٠١٦
 </div>
 
 
 
-<input onclick="radio_click(evt)" id="Area6radio" type="radio" name="AreaRadio">كتل سكنية متفرقة ضمن أحياء: الكارنتينا، بيضون، عين التينة، بسطة
+<input onclick="radio_click(evt)" id="Area6radio" type="radio" name="AreaRadio" value="Area6">كتل سكنية متفرقة ضمن أحياء: الكارنتينا، بيضون، عين التينة، بسطة
 <div id="dates">
 جلسات الورشة: ٥ / ١٢ / ١٩/ ٢٠  آذار (مارس) ٢٠١٦
 </div>
