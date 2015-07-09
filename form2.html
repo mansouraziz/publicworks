@@ -170,7 +170,8 @@ a:active {
   function area_click(evt) {
     var object = evt.target;
     /* Set value for hidden input location */
-    document.getElementById(object.id+"radio").checked = true ; // = object.id;
+    var currentObjectId=object.id;
+    document.getElementById(currentObjectId+"radio").checked = true ; // = object.id;
     /* reset the color; can be selected by class or so later */
     /*document.getElementById("Area1").setAttribute("fill","#FF0000");
     document.getElementById("Area2").setAttribute("fill","#FF0000");
@@ -178,8 +179,17 @@ a:active {
     document.getElementById("Area4").setAttribute("fill","#FF0000");
     document.getElementById("Area5").setAttribute("fill","#FF0000");
     document.getElementById("Area6").setAttribute("fill","#FF0000");
+    /* reset the visibility; can be selected by class or so later */
+    document.getElementById("Area1calendar").style.visibility="hidden";
+    document.getElementById("Area2calendar").style.visibility="hidden";
+    document.getElementById("Area3calendar").style.visibility="hidden";
+    document.getElementById("Area4calendar").style.visibility="hidden";
+    document.getElementById("Area5calendar").style.visibility="hidden";
+    document.getElementById("Area6calendar").style.visibility="hidden";
+    /* set visibility on current area only */
+    document.getElementById(currentObjectId+"calendar").style.visibility="visible";
     /* mark current */
-    object.setAttribute("opacity","1");
+    //object.setAttribute("opacity","1");
   }
 </script>
 
@@ -1136,8 +1146,14 @@ a:active {
        id="line9529"
        style="fill:none" /></g><g
      id="Highways" /></svg>
-</img>
-  <img src="map.svg" width="700" style="position: absolute; top:0; left:0;z-index:-100;pointer-events: none;">
+</object>
+  <img src="map700.png" height="353" style="position: absolute; top:0; right:0;z-index:-100;pointer-events: none;"/>
+  <img id="Area1calendar" class="Area1" src="Area1.svg" width="700" style="position: absolute; top:0; left:0;z-index:-100;pointer-events: none; visibility:hidden;"/>
+  <img id="Area2calendar" class="Area2" src="Area2.svg" width="700" style="position: absolute; top:0; left:0;z-index:-100;pointer-events: none; visibility:hidden;"/>
+  <img id="Area3calendar" class="Area3" src="Area3.svg" width="700" style="position: absolute; top:0; left:0;z-index:-100;pointer-events: none; visibility:hidden;"/>
+  <img id="Area4calendar" class="Area4" src="Area4.svg" width="700" style="position: absolute; top:0; left:0;z-index:-100;pointer-events: none; visibility:hidden;"/>
+  <img id="Area5calendar" class="Area5" src="Area5.svg" width="700" style="position: absolute; top:0; left:0;z-index:-100;pointer-events: none; visibility:hidden;"/>
+  <img id="Area6calendar" class="Area6" src="Area6.svg" width="700" style="position: absolute; top:0; left:0;z-index:-100;pointer-events: none; visibility:hidden;"/>
 </div>
 <br><br>
 اختر الورشة
