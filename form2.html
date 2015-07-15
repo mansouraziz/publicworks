@@ -2,20 +2,18 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Test</title>
+<title>أن نرسم بيروت</title>
 <style>
 
 
 body {
-  /* overflow-x: hidden; */
   margin:0 auto;
   margin:40px;
-  font-size: 12px;
   direction: rtl;
 }
 
 #wrap{
-   width:700px;
+   width:800px;
    margin:0 auto;
    text-align:center; 
    margin-left: auto;
@@ -27,9 +25,35 @@ body {
   text-align: left;
 }
 
+#top {
+  float: center;
+  clear: both;
+}
+
+#sidebar {
+  float:right;
+
+  width:400px;
+  font-size: 11pt;
+}
+
+#main {
+  float:left;
+  width: 300px;
+  font-size: 9pt;
+  text-align: right;
+  padding-right: 100px;
+
+  }
+  
+#footer {
+  clear:both;
+  font-size: 13pt;
+}
+
+
 p {
   font-family: sans-serif;
-  font-size: 12px;
   padding: 0px;
   text-align: right;
   direction: rtl;
@@ -60,17 +84,6 @@ h2 {
   text-align: right;
 }
 
-col {
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-
-    column-width: 350px;
-
-    -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
-    -moz-column-gap: 20px; /* Firefox */
-    column-gap: 20px;
-}
 
 ul.img-list {
   list-style-type: none;
@@ -139,13 +152,13 @@ ul.img-list li:hover img {
 }
 
 a:link {
-    color: black;
+    color: gray;
     text-decoration: none;
 }
 
 /* visited link */
 a:visited {
-    color: black;
+    color: gray;
     text-decoration: none;
 }
 
@@ -164,7 +177,6 @@ a:active {
     background-color: gray;
     text-decoration: none;
 }
-
 
 .pathana {
   stroke-dasharray: 100;
@@ -232,90 +244,60 @@ function createAnimatedStyle() {
 <body>
   <div id="wrap">
 
-  <div id="header">
-  <img src="PublicWorks_logo.png" width="70">
-  </div>
+    <div id="header"><img src="PublicWorks_logo.png" width="70"></div>
+    <div id="menu"><a href="index.html"></a></div>
+    <hr>
+    <br />
 
-  <div class="menu"><a href="index.html"></a></div>
-  <hr>
-  <br />
-  <p width="300">
-  <img src="WorkshopTitle.png" width="350" style="float:right"/>
-  </p>
 
-  <!--- <img align="left" src="BeirutMapSmall.png" width="300"> -->
 
-<script>
-    window.onload = function () {
-    elements = document.getElementsByClassName("path");
-	//alert(elements.length);
-	for(var i = 0; i < elements.length; i++) {
+     
+    <!-- ******** TOP SIDE ********** -->
+    
+    <div id="top">
+    <script>
+      window.onload = function () {
+      elements = document.getElementsByClassName("path");
+	    //alert(elements.length);
+	    for(var i = 0; i < elements.length; i++) {
           elements[i].setAttribute("class","path path" + i);
         }
         /*for (var i = 0; i < elements.length; i++) {
           element = document.getElementsByClassName("path"+i);
-	  element[0].setAttribute("class","pathana");
+	        element[0].setAttribute("class","pathana");
 	  
         }*/
-	createAnimatedStyle();
+	    createAnimatedStyle();
+      }
+    </script>
+
+    <style>
+      .path {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      animation-timing-function: linear;
+      animation-fill-mode : forwards; 
+
+      /* animation: dash 20s linear forwards;*/
+      } 
+
+      @keyframes dash {
+      to {
+      stroke-dashoffset: 0; 
+      }
     }
-</script>
-<object style="float:left" height="350">
+    </style>
 
+     <!--
+     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="700px" height="400px" viewBox="0 0 700 400"  xml:space="preserve">
+     -->
 
-
-
-<style>
-
-
-
-.path {
-
-  stroke-dasharray: 100;
-
-  stroke-dashoffset: 100;
-animation-timing-function: linear;
-  animation-fill-mode : forwards; 
-
- /* animation: dash 20s linear forwards;*/
-
-}
-
-
-
-@keyframes dash {
-
-  to {
-
-    stroke-dashoffset: 0;
-
-  }
-
-}
-
-
-
-</style>
-
-
-
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-
-	 width="900px" height="300px" viewBox="0 0 900 300"  xml:space="preserve">
-
-<g>
-
-	<g id="_x30_3-mosaitbeh.tif_2_">
-
-		<g>
-
-			<g>
-
-				
-
-					<path class="path" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-
-					M87.878,45.491c-3.636-1.173-7.474-0.942-11.184-1.608c-1.058-0.189-1.903,0.012-2.044,1.421
+     <svg version="1.1" width="700px" height="300px" viewBox="0 0 500 200">
+     <g>
+     <g id="_x30_3-mosaitbeh.tif_2_">
+     <g>
+     <g>
+					<path class="path" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M87.878,45.491c-3.636-1.173-7.474-0.942-11.184-1.608c-1.058-0.189-1.903,0.012-2.044,1.421
 
 					c-0.042,0.42-0.231,1.002-0.399,1.477c-0.715,2.017,0.101,2.967,2.251,3.626c1.216,0.373,2.123,0.526,2.704-0.776
 
@@ -5382,40 +5364,38 @@ animation-timing-function: linear;
 					c-0.003-0.362,0.245-0.663,0.529-0.901"/>
 
 			</g>
+		</g> 
+    </g>
+    </g>
 
-		</g>
+    </svg>
 
-	</g>
+</div>
 
-</g>
-
-</svg>
-
-</object>
-  <img src="WorkshopSubtitle.png" width="350" style="float:right;clear:both"/>
-</p>
+<!-- ***** TOP PART ENDS ***** -->
 
 
+<!-- SIDE BAR -->
+
+   <div id="sidebar">
+    <img src="WorkshopTitle.png" width="400" style="clear: both"/>
+    <img src="WorkshopSubtitle.png" width="400" style="clear:both; padding-top:5px"/>
 
 
-
-
-  <br /><br />
-  <h1 style="clear:both">مساحةٌ بحثيةٌ تشاركيةٌ لتفعيل الحق في المدينة والسكن</h1>
 
 
   <br />
-<p>
+<p><b>
 تتوجّه ورش العمل إلى مجموعةٍ مختارةٍ من الشبان والشابات ممن لديهم/ن اهتمامٌ في القضايا المدينية، والبحوث، ورسم الخرائط، وكذلك روايات أحياء بيروت وتاريخها. وتتناول ورش العمل بشكل رئيسٍ إشكالية السكن في بيروت، مع التركيز على تجارب المستأجرين/ات القدامى في تأمين السكن في المدينة، والخطر المتمثّل في إخلائهم/ن.
 </p>
 <p> وفي كل ورشة عملٍ، نخوض تجربةً جماعيةً في البحث الميداني وفي النقاشات التي تليه، ونتعرّف معاً عن كثبٍ الى حيٍّ من أحياء بيروت، لنفهمه من خلال روايات سكانه المستأجرين/ات، ونطّلع على تاريخه، وتشكّله، وملكيّة الأراضي فيه، وكذك المشاريع العقارية المخطّط لها في الحيّ. وتتميّز ورش العمل بأنها تعمل على تحليل جميع المواد والروايات التي سيجمعها المشاركون/ات في عملهم/ن الميداني، وتحويلها في نهاية كل ورشةٍ الى كتابٍ عن الحيّ ومستأجريه؛ كتابٌ من صنع المشاركين/ات أنفسهم/ن. 
-</p>
+</p></b>
 <p>
-يمكن تحميل الكتاب الذي أنتجناه عن منطقة الباشورة مع المشاركين/ات في ورشة عملٍ سابقةٍ (رابط التحميل)، كما تتوفّر نسخاتٌ مطبوعةٌ منه في المانشن (مع رابط العنوان). 
-</p>
+يمكن <a>تحميل الكتاب</a> الذي أنتجناه عن منطقة الباشورة مع المشاركين/ات في ورشة عملٍ سابقةٍ، كما تتوفّر نسخاتٌ مطبوعةٌ منه في <a>المانشن</a>.</p>
 
 
-  <h2>عن المشروع</h2>
+<br />
+<h1>عن المشروع</h1>
 
 
 <p>
@@ -5432,51 +5412,91 @@ animation-timing-function: linear;
 <p>
 فمن خلال إيجاد هذه المساحة، نطمح الى إشراك الشباب/الشابات والطلاب/الطالبات من مختلف الأحياء والجامعات، في عمليات البحث والتفكير والإنتاج، بهدف تمكينهم/ن من بلورة مفاهيم العدالة المكانية والحق في السكن. وتكمن نقطة انطلاقنا في هذا المشروع، من ايماننا بأن فقدان المستأجرين/ات القدامى لسكنهم/ن من دون ضماناتٍ، هي خسارةٌ لا تقتصر عليهم/ن فحسب، بل تطال جميع سكان المدينة ومستقبلها. 
 </p>
+<br />
+<h1>بنية ورش العمل</h1>
 
-
-
-<h2>بنية ورش العمل</h2>
+<p>
+فترة الجسات من العاشرة صباحاً حتى الرابعة بعد الظهر
+</p>
 
 
  <p>
   <b>الجلسة الأولى: إمكانية السكن في بيروت </b>
-
+<br/>
 في اليوم الأول، ننظّم جلسةً حواريةً مفتوحةً عن إمكانية السكن في بيروت، من خلال تجارب المشاركين/ات أنفسهم/ن. بعدها، نطرح قضية الإيجارات القديمة في سياقها التاريخي، كما نعرّف بالحيّ الذي تتناوله ورشة العمل، وتاريخه، وسبب اختياره في سياق المشروع. وفي نهاية اليوم، نناقش مهارات البحث الميداني وأدبيّاته، تمهيداً للمرحلة الأولى من العمل الميداني. 
-</p>
-<p>
-* في خلال الأسبوع التالي، يجمع المشاركون/ات معلوماتٍ عن التشكيل السكاني والعمراني للحيّ، من خلال العمل الميداني.
+<br /><font color="gray">
+— في خلال الأسبوع التالي، يجمع المشاركون/ات معلوماتٍ عن التشكيل السكاني والعمراني للحيّ، من خلال العمل الميداني.</font>
 </p>
 
 
 <p>
   <b>الجلسة الثانية: أن نروي المدينة وسكانها</b>
-
+<br/>
 يبدأ اليوم بتوليف المواد التي جمعها المشاركون/ات في خلال العمل الميداني، ومن ثم تحويلها الى خرائط. بعدها، نقدّم المرحلة التالية من الورشة، ومحورها كيفية التفكير في المدينة انطلاقاً من روايات سكانها، وكيفية رسمها أو خلق تمثيلٍ لها. وفي هذا الاطار، نناقش السؤال التالي: كيف نجري مقابلاتٍ معمّقةٍ مع بعض السكان، من شأنها نقل تجربتهم/ن في السكن في بيروت وتاريخ الحيّ الذي يسكنون فيه؟ 
-</p>
-<p>
-* في خلال الأسبوع التالي، يجري المشاركون/ات مقابلاتٍ معمّقةٍ مع أشخاصٍ مختارين/ات من الحيّ ويدوّنونها. 
+<br /><font color="gray">
+— في خلال الأسبوع التالي، يجري المشاركون/ات مقابلاتٍ معمّقةٍ مع أشخاصٍ مختارين/ات من الحيّ ويدوّنونها. 
+</font>
 </p>
 
 <p>
   <b>الجلسة الثالثة: رسم خرائط وكتابات إبداعية </b>
-
+<br/>
 انطلاقاً من المقابلات التي يقدّمها كل مشارك/ة في الورشة، نقوم جماعياً برسم خرائط جديدةٍ للحيّ وللقضايا التي تثيرها المقابلات، كم نعيد كتابة بعض المقابلات بشكلٍ إبداعي. 
 </p>
 
 <p>
   <b>الجلسة الرابعة: صناعة الكتاب</b>
-
+<br/>
 في خلال الجلسة الأخيرة، نقوم بتجميع وتوليف كامل المواد التي جرى إنتاجها في خلال ورش العمل والبحث الميداني، لنفكّر فيها من منطلق تصميم وإنتاج كتابٍ يعبّر عن الحيّ، والسكان، والقضايا التي أُثيرت، وكذلك التجربة التي خضناها معاً. 
 </p>
 <br />
+
+
+</div>
+
+<div id="main">
+
+  <br /><br /><br /><br /><br /><br /><br /><br />
+  
+
+  <img src="open-iconic/svg/document.svg" width="20" style="padding-left: 5px">
+  <a href="#form">
+  <font size="5">للتسجيل</font></a>
+  <br><br>
+  <img src="open-iconic/svg/file.svg" color="gray" width="20" style="padding-left: 5px">
+  <a href="files/WorkshopPoster.jpg">
+  <font size="5">تحميل البوستر</font></a>
+
+  <br /><br />
+  <br /><br />
+
+
+  <img src="hoods/01.svg" width="200">
+  <img src="hoods/02.svg" width="200" style="padding-bottom: 30px">
+  <img src="hoods/03.svg" width="200">
+  <img src="hoods/04.svg" width="200">
+  <img src="hoods/05.svg" width="200">
+  <img src="hoods/06.svg" width="200">
+
+  <p>
+  </p>
+
+
+
+
+</div>
+
+
+<div id="footer">
+    <a name="form"></a>
+
 <hr>
 
-<h2>الإستمارة</h2>
+<h1>الإستمارة</h1>
 <p>
-(الموعد النهائي للتسجيل ٢٩ أيلول)
+(الموعد النهائي للتسجيل ٣٠ تموز)
 </p>
 <br>
-
   <form style="text-align: right;" action="submit.php" method="get" class="form-horizontal">
 
 <p>الاسم والشهرة <input name="name">
@@ -5491,13 +5511,19 @@ animation-timing-function: linear;
 الإختصاص/ المهنة <input name="job"></p>
 
 <p>
-التعليم (الكلية والجامعة)<input name="edu"></p>
+التعليم (الكلية والجامعة) <input name="edu"></p>
 
-<br><br>
+<p>رقم الهاتف <input name="tel"></p>
+
+<p>البريد الإلكتروني <input name="email"></p>
+
 ما الذي يثير إهتمامك في الورشة وما الحافز للمشاركة؟<br>
 <textarea style="width: 400px; height: 100px;"></textarea><br>
 
-<br>
+<br/>
+
+اختر الورشة من الخريطة
+
 <div style="position: relative; left: 0; top: 0; width:925;">
 
 <object height="353" width="530" style="width:530;height:353; position: absolute; top: 0; right:0 ;z-index:1;" >
@@ -6339,27 +6365,28 @@ animation-timing-function: linear;
        style="fill:none" /></g><g
      id="Highways" /></svg>
 </object>
-  <img src="map700.png" height="353" style="position: absolute; top:0; right:0;z-index:-100;pointer-events: none;"/>
+
+
+
+  <img src="map700.png" height="353" width="700" style="position: absolute; top:0; right:0;z-index:-100;pointer-events: none;"/>
   <img id="Area1calendar" class="Area1" src="Area1.svg" width="700" style="position: absolute; top:0; left:0;z-index:-100;pointer-events: none; visibility:hidden;"/>
   <img id="Area2calendar" class="Area2" src="Area2.svg" width="700" style="position: absolute; top:0; left:0;z-index:-100;pointer-events: none; visibility:hidden;"/>
   <img id="Area3calendar" class="Area3" src="Area3.svg" width="700" style="position: absolute; top:0; left:0;z-index:-100;pointer-events: none; visibility:hidden;"/>
   <img id="Area4calendar" class="Area4" src="Area4.svg" width="700" style="position: absolute; top:0; left:0;z-index:-100;pointer-events: none; visibility:hidden;"/>
   <img id="Area5calendar" class="Area5" src="Area5.svg" width="700" style="position: absolute; top:0; left:0;z-index:-100;pointer-events: none; visibility:hidden;"/>
-  <img id="Area6calendar" class="Area6" src="Area6.svg" width="700" style="top:0; left:0;z-index:-100;pointer-events: none; visibility:hidden;"/>
+  <img id="Area6calendar" class="Area6" src="Area6.svg" width="700" style="position: absolute; top:0; left:0;z-index:-100;pointer-events: none; visibility:hidden;"/>
 </div>
+
+
+
 <div id="radios">
-<br><br>
-اختر الورشة
-<br>
 
 <input onclick="radio_click(evt)" id="Area4radio" type="radio" name="AreaRadio" value="Area4">
 
 حي الروم/ مار مخايل
 <br>
-<div id="dates">
-جلسات الورشة:  ٧ / ١٤ / ٢١ / ٢٢  آب (أغسطس) ٢٠١٥
+<div id="dates">جلسات الورشة:  ٧ / ١٤ / ٢١ / ٢٢  آب (أغسطس) ٢٠١٥
 </div>
-
 
 <input onclick="radio_click(evt)" id="Area3radio" type="radio" name="AreaRadio" value="Area3">مصيطبة
 <br>
@@ -6367,27 +6394,20 @@ animation-timing-function: linear;
 جلسات الورشة: ٣ / ١٠ / ١٧ / ١٨ أيلول (سبتمبر) ٢٠١٥
 </div>
 
-
-
 <input onclick="radio_click(evt)" id="Area2radio" type="radio" name="AreaRadio" value="Area2">حي السكة
 <div id="dates">
 جلسات الورشة: ٣ / ٧ / ١٠ / ١١ تشرين الأول (أكتوبر) ٢٠١٥
 </div>
-
-	
 
 <input onclick="radio_click(evt)" id="Area1radio" type="radio" name="AreaRadio" value="Area1">طريق الجديدة / ملعب البلدي
 <div id="dates">
 جلسات الورشة: ٣ / ٧ / ١٠ / ١١  تشرين الثاني (نوفمبر) ٢٠١٥  
 </div>
 
-
 <input onclick="radio_click(evt)" id="Area5radio" type="radio" name="AreaRadio" value="Area5">عين الرمانة / شياح
 <div id="dates">
 جلسات الورشة: ٦ / ١٣ / ٢٠ / ٢١ شباط (فبراير) ٢٠١٦
 </div>
-
-
 
 <input onclick="radio_click(evt)" id="Area6radio" type="radio" name="AreaRadio" value="Area6">كتل سكنية متفرقة ضمن أحياء: الكارنتينا، بيضون، عين التينة، بسطة
 <div id="dates">
@@ -6395,6 +6415,9 @@ animation-timing-function: linear;
 </div>
 
 </div>
+
+
+
 <br><br>
 <input type="submit">
 
@@ -6402,7 +6425,18 @@ animation-timing-function: linear;
 <br><br>
 
   </p>
+
+
+
 </div>
+</div>
+
+
+
+
+</div>
+
+
 
 </body>
 </html>
