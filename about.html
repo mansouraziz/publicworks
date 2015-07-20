@@ -4,15 +4,76 @@
 <meta charset="utf-8">
 <title>Test</title>
 <style>
-body {
-  background: url(brillant.png);
-  overflow-x: hidden;
+
+
+@font-face {
+    font-family: 'nassimregular';
+    src: url('fonts/NassimArabicWeb-Regular.eot');
+    src: url('fonts/NassimArabicWeb-Regular.woff') format('woff'),
+         url('fonts/NassimArabicWeb-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'nassimbold';
+    src: url('font/NassimArabicWeb-Bold.eot');
+    src: url('fonts/NassimArabicWeb-Bold.woff') format('woff'),
+         url('fonts/NassimArabicWeb-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  /* background: url(brillant.png); */
+  overflow-x: hidden;
+  direction: rtl;
+  text-align: right;
+  font-family: 'nassimregular';
+
+}
+
+
+#header {
+  text-align: left;
+  direction: rtl;
+  font-family: 'nassimregular';
+
+
+}
+
+#wrap{
+   width:800px;
+   margin:0 auto;
+   text-align: right; 
+   direction: rtl;
+   margin-left: auto;
+   margin-right: auto;
+  font-family: 'nassimregular';
+
+
+}
+
+#sidebar {
+  float:right;
+  font-family: 'nassimregular';
+  width:400px;
+  font-size: 13pt;
+}
+
+#main {
+  float:left;
+  width: 300px;
+  font-size: 9pt;
+  text-align: right;
+  padding-right: 100px;
+
+  }
 
 p {
 
-  font-family: sans-serif;
-  font-size: 12px;
+  font-family: nassimregular;
+  font-size: 14px;
   padding: 0px;
 
 }
@@ -116,29 +177,47 @@ a:active {
 </head>
 
 <body style="margin:40px;">
+  <div id="wrap">
+
+  <div id="header">
   <a href="http://publicworksstudio.com"><img src="PublicWorks_logo.png" width="70"></a>
-  <div class="menu"><a href="projects.html">What do we do</a></div>
+  <div class="menu"><a href="projects.html">مشاريعنا</a></div>
   <hr>
+  </div>
+
+  <div id="sidebar">
   <br />
+  <h1>عن «أشغال عامة»</h1>
   <p>
-   Public Works is a design and research studio that considers these two domains of knowledge as complementary practices. The collective is initiated by an architect (Abir Saksouk) and a graphic designer (Nadine Bekdache) who have overlaid their respective design disciplines with the study of urbanism. Together, along with a network of individuals - scholars, activists, architects, designers, artists, planners, and users – seek to engage critically and politically in a wide range of urban and public issues, within a common work environment. As architects and urban planners, we aim to produce socially inclusive and sustainable places. As graphic designers, we approach the discipline as producers of socially conscious new knowledge. 
+«أشغال عامة» هو استوديو يجمع عدداً من المعماريين/ات ومصممي/ات الغرافيك والباحثين/ات، أسّسته كلّ من نادين بكداش وعبير سقسوق في العام 2012.  </p>
+  <p>
+في «أشغال عامة»، نجد قيمةً فعليّةً في الربط بين مجالَي التصميم والبحث من جهة، ومجال الدراسات المدينية والعمرانية من جهةٍ أخرى. ونهدف من خلال ذلك الى تناول الشؤون العامة وقضايا الحقّ في المدينة بشكلٍ نقدي، وسياسي وخلّاق. فنحن كمعماريين ومخططين مدينيين، نطمح إلى إنتاج أماكن مستدامةٍ ودامجةٍ اجتماعياً. كما ننشد كمصممي الغرافيك نشر المعرفة، وإنتاج تمثيلاتٍ بصريّة منسجمةٍ مع السياق الثقافي والاجتماعي.
   </p>
   <p>
-   The studio offers professional services through design applications, consultancy, and urban research. It also aspires to function as a common space of discussion, exchange, and engagement. Our previous involvement in research projects, as well as our personal experiences, testify to a major rift between the inclusiveness and equality we strive for and the harsh realities of urban politics. Practices such as the privatization of the Lebanese coast, the ongoing eviction of the city’s residents, the marginalization of rural areas, and the construction of boundaries around Palestinian refugee camps as well as low-income neighborhoods, have intensified  our determination to be actively involved in the future of our cities, villages and natural landscapes.
+يقدّم الاستوديو خدماتٍ مهنيةٍ في مجالات التصميم الغرافيكي، والعمارة، والاستشارات، والتخطيط والبحث المديني ضمن بيئة عملٍ مشتركة، اذ نعمل مع شبكةٍ متنوعةٍ من الرسامين، والمؤرّخين، وصانعي الأفلام، والصحافيين، والناشطين والفنانين وغيرهم. وتشمل مشاريعنا انتاج التصاميم المساحية، والتوجيهات المدينية، والمنشورات، والخرائط، والهويّات البصرية، والرسوم المتحرّكة والحملات. بالإضافة إلى ذلك، يتضمّن عملنا تنظيم ورشات عمل، وحواراتٍ وندواتٍ كمنهجيّة للبحث، وكمنصّةٍ للتأثير في الخطاب العام وانتاج المعرفة عن القضايا المدينية.
   </p>
   <p>
-   Faith in change is the underlying backdrop to this initiative. Its aim is to spur thinking on the interface between social practices, representations and the built environment, in the context of spatial injustices in Lebanon.
+ وتثبت مشاركاتنا السابقة في المشاريع البحثية، فضلاً عن تجاربنا الشخصية، تباعداً كبيراً بين مبادئ العدالة والمساواة التي نسعى الى تحقيقها، وبين واقع السياسات المدينية القاسي الذي نعيش. وينطوي هذا الواقع على ممارساتٍ متوحّشة مثل خصخصة الساحل اللبناني، والإخلاء المستمرّ لسكان المدينة، والتدابير الأمنية والبنى التحتية التي تقيّد حركيّة الجماعات المستضعفة، وتهميش المناطق الريفية، وانشاءالحدود لمحاصرة مخيمات اللاجئين الفلسطينيين والأحياء المفقرة. هذه الممارسات زادت من تصميمنا على المشاركة بشكلٍ فاعلٍ في مستقبل مدننا، وقرانا ومساحاتنا الطبيعية من خلال عملنا المهني. على هذا النحو، يمثّل الوعي للبعد الاجتماعي والسياسي لمهننا، معطوفاً على الإيمان بالتغيير، العصبَ الأساس لهذه المبادرة الهادفة الى تحفيز التفكير في صلة الوصل بين الممارسات الاجتماعية، والتمثيلات والبيئة العمرانية، في سياق الاضطهاد المساحي في لبنان.
   </p>
+
   <p>
-   The studio’s resources include a network of architects, designers, urbanists, historians, illustrators, writers, filmmakers, journalists, animators and artists. As part of Public Work's research methodology, it revisits studies by students, scholars and other collectives, as well as rely on various methods to produce knowledge about urban issues: oral history, archival research, interviews, documentation, mapping practices, spatial analysis, legal analysis, film, photography and interventions in space. Its productions include buildings, publications, maps, visual identities, animations, campaigns and more. Moreover, it conducts workshops, talks, and seminars as both a research methodology and as a platform to influence public discourse. Its engagement extends to social media platforms, translation activities, and publishing under a Creative Commons license.
+تأسّس استوديو «أشغال عامة» في العام 2012، وهو مسجّلٌ حالياً كشركةٍ مدنيةٍ غير تجارية. ويوفّق الاستوديو بين الأعمال المكلّف بها والمشاريع الذاتيّة من جهة، وبين اطار العمل المستقلّ الذي يتيح انبثاق امكاناتٍ جديدةٍ للنقاش، والتبادل والالتزام من جهةٍ أخرى. 
+
   </p>
-  <p>
-  <strong>Contact</strong><br/>
-  E: info@publicworksstudio.com<br/>
-  T: 01567205<br/>
-  A: Beirut, Gemayze Street, Art Lab building, 4th floor<br/>
+  <p> 
+  <h1>للاتصال بنا</h1>
+  البريد الالكتروني: info@publicworksstudio.com<br/>
+  الهاتف: 01567205<br/>
+  العنوان: بيروت، شارع الجميزة، مبنى آرت لاب Art Lab، الطابق الرابع
+<br/>
+<br/>
+<br/>
+<br/>
   
   </p>
+
+  </div>
+  </div>
 
 </body>
 </html>

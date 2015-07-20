@@ -4,15 +4,59 @@
 <meta charset="utf-8">
 <title>Test</title>
 <style>
+
 body {
-  background: url(brillant.png);
+  /* background: url(brillant.png); */
   overflow-x: hidden;
+  direction: rtl;
+  text-align: right;
+
 }
+
+@font-face {
+    font-family: 'nassimregular';
+    src: url('fonts/NassimArabicWeb-Regular.eot');
+    src: url('fonts/NassimArabicWeb-Regular.woff') format('woff'),
+         url('fonts/NassimArabicWeb-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nassimbold';
+    src: url('font/NassimArabicWeb-Bold.eot');
+    src: url('fonts/NassimArabicWeb-Bold.woff') format('woff'),
+         url('fonts/NassimArabicWeb-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#header {
+  text-align: left;
+  direction: rtl;
+
+}
+
+#wrap{
+   width:800px;
+   margin:0 auto;
+   text-align: right; 
+   direction: rtl;
+   margin-left: auto;
+   margin-right: auto;
+
+
+}
+
 ul.img-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: right;
+  direction: rtl;
+
+
 }
  
 ul.img-list li {
@@ -20,7 +64,11 @@ ul.img-list li {
   height: 220px;
   margin: 0 1em 1em 0;
   position: relative;
+  direction: rtl;
+  text-align: right;
   width: 220x;
+  direction: rtl;
+
 }
 
 ul.img-list li img{
@@ -29,18 +77,17 @@ ul.img-list li img{
   -moz-transition: opacity 500ms;
   -o-transition: opacity 500ms;
   transition: opacity 500ms;
-}
-
-span.text-content span {
-
+  direction: rtl;
 }
 
 span.text-content {
   background: white;
   color: black;
+  direction: rtl;
+  text-align: right;
   cursor: pointer;
-  font-family: sans-serif;
-  font-size: 12px;
+  font-family: nassimregular;
+  font-size: 13px;
   padding: 0px;
   display: table;
   height: 220px;
@@ -51,15 +98,16 @@ span.text-content {
   opacity: 1;
   z-index:-100;
   display: table-cell;
-  text-align: left;
   vertical-align: middle;
 }
 
 .menu {
   color: black;
-  font-family: sans-serif;
-  font-size: 11px;
+  font-family: nassimregular;
+  font-size: 12px;
   text-align: right;
+  direction: rtl;
+
 }
 
 
@@ -80,7 +128,6 @@ a:hover {
     text-decoration: none;
     background-color: gray;
 
-
 }
 
 /* selected link */
@@ -89,7 +136,6 @@ a:active {
     background-color: gray;
     text-decoration: none;
 }
-
 
 ul.img-list li img{
   opacity: 0;
@@ -106,73 +152,92 @@ ul.img-list li:hover img {
 </head>
 
 <body style="margin:40px;">
+
+  <div id="wrap">
+
+  <div id="header">
   <a href="http://publicworksstudio.com"><img src="PublicWorks_logo.png" width="70"></a>
+  </div>
+
   <div class="menu">
-  <a href="about.html">About / contact us</a></div>
+  <a href="about.html">عن «أشغال عامة» / الإتصال بنا</a></div>
   <hr>
 <ul class="img-list">
  
   <li>
       <img src="./images/SpaceProduction.jpg" width="230" height="230" />
-      <span class="text-content"><h2>Space Production</h2>We regard space production as social processes, imbedded in social practices. We approach the conception and design of identities for emerging places, where local context and site specificities give form to the uniqueness of the visual identity. We aim to produce spaces and buildings that are inclusive and sustainable - as we did when we designed libraries in Palestinian camps, or renovated an office building in Hamra.
+      <span class="text-content"><h2>تصميم الأماكن </h2>نحن ننظر الى انتاج المساحة والبناء كعملية اجتماعية نطمح من خلالها الى انتاج أماكن ومبانٍ مستدامةٍ ودامجة، كما في عملنا السابق على تصميم مكتباتٍ عامة عدّةٍ في المخيمات الفلسطينية، واعادة تأهيل متحفٍ للذاكرة في مخيم شاتيلا. بشكل مماثل نقارِب تصوّر وتصميم الهويات الخاصة بالأماكن الناشئة، بحيث عملنا أيضاً على خلق هويات بصريةٍ لكلّ من "المؤسسة العربية لمسارح الدمى والعرائس" واستوديو «دَمْج».
       </span>
   </li>
 
   <li>
       <img src="./images/Campaigns.jpg" width="230" height="230" />
-      <span class="text-content"><h2>Communication Campaigns </h2>Creating a campaign is a political act. The images, scenes, narratives, meanings and messages we create are informed by a critical perspective on power relations. Our engagement can stretch to include building coalitions and generating media coverage. We have been involved in various campaigns on different levels: consultancy, conceptualization and implementation.
+      <span class="text-content"><h2>الحملات الإعلامية </h2>اطلاق حملةٍ هو فعلٌ سياسي. فكلّ ما نبتكر من الصور، والمشاهد، والسرديات، والمعاني، والرسائل، يأتي مدعّماً بمنظورٍ نقدي لعلاقات القوة. ويمكن لعملنا أن يمتدّ ليشمل بناء الائتلافات وتأمين التغطية الاعلامية. وحتى اليوم، شاركنا في حملاتٍ متنوعةٍ على مستوياتٍ مختلفةٍ مع لجنة أهالي المفقودين واتحاد المقعدين ومنظمة انترناشونال ألرت. 
+
       </span>
   </li>
 
   <li>
       <img src="./images/Planning.jpg" width="230" height="230" />
-      <span class="text-content"><h2>Development Planning</h2>Intervening in space gives shape to social, economic and political formations. With a conviction that urban planning cannot “create” social relations, it can nonetheless pave the way, assess past experiences, offer a lesson from the failures, and give birth to the possible. This is how we approached planning reports for the future of the coast of Saida, the seafront of Ras Beirut, and the industrial site of Miziara in North Lebanon. 
+      <span class="text-content"><h2>التوجيهات المدينية</h2>للتدخل في المكان تبعات اجتماعيةٍ واقتصاديةٍ وسياسيةٍ عدّة. ومع يقيننا بأنه لا يمكن للتخطيط المديني "خلق" العلاقات الاجتماعية، الا أن بامكانه تمهيد الطريق، وتقييم التجارب الماضية، واستقاء دروسٍ من الفشل، وانجاب الممكن. بهذه الذهنية، قارَبنا في السابق الواجهة البحرية لرأس بيروت، والمنطقة الصناعية في مزيارة في شمال لبنان.
+
       </span>
   </li>
 
   <li>
       <img src="./images/Publications.jpg" width="230" height="230" />
-      <span class="text-content"><h2> Publications </h2>We look at publications as constructing narratives and directing content from a critical perspective. It is a process where we make sense of the material and assume a primary position in shaping it. Whether commissioned or self-initiated work, designing publications also involves questioning production, printing and dissemination. 
+      <span class="text-content"><h2>المنشورات</h2>نحن نولي الأهمية لدور المنشورات في بناء السرديات وتوجيه المحتوى من منظورٍ نقدي. فهي عمليةٌ ندرك من خلالها فحوى المواد، ونتولّى الدور الرئيس في صياغته. وسواء جاء العمل بمبادرةٍ ذاتيةٍ منا أو بتكليفٍ من جهةٍ ما، فان تصميم المنشورات يتضمّن التساؤل، والانتاج، والطباعة والتوزيع. 
+
 
       </span>
   </li>
 
   <li>
       <img src="./images/Mapping.jpg" width="230" height="230" />
-      <span class="text-content"><h2>Research & Mapping</h2>Mapping is a research method that can offer layered readings to a complex set of data. We have conducted research, collected data, and used mapping to make analyze security measures in Beirut, historical practices of public space in Beirut, and the communal making of popular football fields in the city. 
+      <span class="text-content"><h2>البحث ورسم الخرائط</h2>رسم الخرائط هو وسيلةٌ بحثيةٌ يمكنها توفير قراءاتٍ متعدّدة المستويات لمجموعةٍ معقّدةٍ من المعلومات. حتى الآن، تضمّن عملنا اجراء البحوث، وجمع المعلومات، واستخدام رسم الخرائط في تحليل الاجراءات الأمنية في بيروت، والممارسات التاريخية في المساحة العامة فيها، وكذلك لملاعب كرة القدم الشعبية في بيروت.
+
 
       </span>
   </li>
 
   <li>
       <img src="./images/Film.jpg" width="230" height="230" />
-      <span class="text-content"><h2>Research & Film</h2>Video and animation are meaningful research methods as well as popular platforms to engage wider audiences. Collaborating with Maher Abi Samra on his film on domestic house workers, we investigated the maid’s room, as well as created a mapping for the system of sponsorship. We also collaborated with Juma Hamdo to construct an alternative narrative of the neighborhood of Zkak el Blatt from the perspective of a community living under the old rent law.
+      <span class="text-content"><h2>البحث والأفلام</h2>يمثّل الفيديو والرسوم المتحركة وسائل بحثٍ بنّاءة، وكذلك منصّاتٍ ذات شعبيةٍ لإشراك جماهير واسعة. ومن خلال التعاون مع المخرج ماهر أبي سمرا في عمله على فيلمٍ عن عاملات المنازل، قمنا بتحرّي غرفة العاملة، كما طوّرنا خريطةً لنظام الكفالة المعتمَد في لبنان. ومن جهةٍ أخرى، تعاونّا مع المخرجة جمعة حمدو لبناء سرديةٍ بديلةٍ عن حي زقاق البلاط، من منظور المجتمع الذي يعيش في ظلّ قانون الايجارات القديم. 
+
       </span>
   </li>
 
   <li>
       <img src="./images/Writings.jpg" width="230" height="230" />
-      <span class="text-content"><h2>Research & Writing</h2>Critical discourse on present salient issues in our cities and environments, whether in the form of journal publications, books, debates, lectures, or seminars, predominantly expresses itself in a foreign language. We aim to contribute in producing writings on the city and urban struggles in Arabic; our series of “right to the city” in Bidayat magazine being one of them.
+      <span class="text-content"><h2>البحث والكتابة</h2>تهيمن اللغةُ الأجنبية على الخطاب النقدي الخاص بالقضايا الآنية الهامة في مدننا وبيئاتنا، سواء على شكل منشوراتٍ صحافية، أو كتب، أو نقاشات، أو محاضرات، أو ندوات. لهذا، نهدف الى المساهمة في انتاج كتاباتٍ عن المدينة والصراعات المدينية باللغة العربية؛ وتشكّل سلسلة "الحق في المدينة" في مجلة "بدايات" احدى هذه المساهمات. 
+
       </span>
   </li>
 
   <li>
       <img src="./images/Workshops.jpg" width="230" height="230" />
-      <span class="text-content"><h2>Workshops</h2>Youth engagement in thinking through the future of the city is significant in the process of urban change. We conducted training workshops that enabled youth to conduct a combination of field-work and studio training in research on space. Such an activity was meant to bring forth a historically rooted narrative about neighborhoods that have been over-shadowed by market led dominant models.
+      <span class="text-content"><h2>ورش العمل</h2>ان اشراك الشباب في التفكير في مسقبل المدينة هو أمرٌ بالغ الأهمية في عملية التغيير المديني. من هذا المنطلق، نظّمنا ورش عملٍ تدريبيةٍ أتاحت للشباب اختبار مزيجٍ من العمل الميداني، والتدريب في الأستوديو على البحث المتعلق بالمساحة. وهدف هذا النشاط الى ابراز السردية المتجذّرة تاريخياً عن الأحياء التي باتت محجوبةً بفعل هيمنة النماذج المنقادة لسياسات السوق. 
+
       </span>
   </li>
 
   <li>
       <img src="./images/Events.jpg" width="230" height="230" />
-      <span class="text-content"><h2>Events & Activities</h2>By distributing what we produce as a collective, we aim to both reflect on our work to further develop it, as well as to stimulate new ideas and visions. We have hence been involved (as individuals) in organizing conferences and talks, such as the rent control conference that took place at AUB or the Dalieh university seminars. We aim to produce more events and activities that would act as platforms for in-depth discussions and for the dissemination of research outcomes. 
-
-      </span>
+      <span class="text-content"><h2>النشاطات</h2>من خلال نشر نِتاجنا كمجموعة، نسعى الى تحقيق هدفَين: أولاً، التفكّر في عملنا بغرض تطويره، وثانياً، تحفيز الأفكار والرؤى الجديدة. لهذا، انخرطنا (كأفرادٍ) في تنظيم المؤتمرات والحوارات، مثل مؤتمر ضبط الإيجارات في الجامعة الأميركية في بيروت، والندوات الجامعية بشأن قضية دالية الروشة. كذلك نهدف الى انتاج المزيد من النشاطات، لتغدو منصّاتٍ تستضيف نقاشاتٍ معمّقة.
+      </span>    
   </li>
 
+  <li>
+          <img src="./images/urban_rights.png" width="230" height="230" />
 
+      <span class="text-content"><h2>الانخراط الفاعل في القضايا المدينية</h2>ينبع انخراطنا في القضايا المدينية من يقيننا بوجود حاجةٍ ماسةٍ الى فهمٍ ومشاركةٍ عامةٍ واسعةٍ في عمليات انتاج المكان والبيئة العمرانية في لبنان. وقد لعبنا كأفرادٍ أدواراً فاعلةً في تحركاتٍ عدّةٍ مثل قضية استعادة الدالية ولجنة المستأجرين/ات القدامى، وساهمنا في البحث، وصياغة الحملات والبيانات، وصناعة البصريات، وتنظيم النشاطات. ونحن نرى في هذه الأنشطة عاملاً أساسياً في تشكيل مفهوم العدالة والحق في المدينة. 
 
+      </span>    
+  </li>
 
 </ul>
+
+</div>
 
 </body>
 </html>
