@@ -6,10 +6,29 @@
 <style>
 
 
+@font-face {
+    font-family: 'nassimregular';
+    src: url('fonts/NassimArabicWeb-Regular.eot');
+    src: url('fonts/NassimArabicWeb-Regular.woff') format('woff'),
+         url('fonts/NassimArabicWeb-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nassimbold';
+    src: url('font/NassimArabicWeb-Bold.eot');
+    src: url('fonts/NassimArabicWeb-Bold.woff') format('woff'),
+         url('fonts/NassimArabicWeb-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   margin:0 auto;
   margin:40px;
   direction: rtl;
+  font-family: 'nassimregular';
 }
 
 #wrap{
@@ -21,20 +40,18 @@ body {
 
 }
 
-#header {
-  text-align: left;
-}
-
 #top {
   float: center;
   clear: both;
 }
 
+
+
 #sidebar {
   float:right;
-
+  font-family: 'nassimregular';
   width:400px;
-  font-size: 11pt;
+  font-size: 13pt;
 }
 
 #main {
@@ -51,9 +68,14 @@ body {
   font-size: 13pt;
 }
 
+#header {
+  text-align: left;
+  direction: rtl;
+  font-family: 'nassimregular';
+}
 
 p {
-  font-family: sans-serif;
+  font-family: 'nassimregular';
   padding: 0px;
   text-align: right;
   direction: rtl;
@@ -61,7 +83,7 @@ p {
 
 #dates {
   color: gray;
-  font-size: 10px;
+  font-size: 14px;
   padding-right: 20px;
   padding-top: 3px;
   padding-bottom: 5px;
@@ -69,7 +91,7 @@ p {
 }
 
 h1 {
-  font-family: sans-serif;
+  font-family: nassimbold;
   font-size: 16px;
   font-weight: bold;
   padding: 0px;
@@ -77,7 +99,7 @@ h1 {
 }
 
 h2 {
-  font-family: sans-serif;
+  font-family: nassimbold;
   font-size: 14px;
   font-weight: bold;
   padding: 0px;
@@ -146,8 +168,8 @@ ul.img-list li:hover img {
 
 .menu {
   color: black;
-  font-family: sans-serif;
-  font-size: 11px;
+  font-family: 'nassimregular';
+  font-size: 12px;
   text-align: right;
 }
 
@@ -246,8 +268,8 @@ function createAnimatedStyle() {
 
     <div id="header"><img src="PublicWorks_logo.png" width="70"></div>
 
-      <div class="menu"><a href="projects.html">Our projects</a> | 
-  <a href="about.html">About / contact us</a></div>
+      <div class="menu"><a href="projects.html">مشاريعنا</a> | 
+  <a href="about.html">من نحن</a></div>
 
 
     <div id="menu"><a href="index.html"></a></div>
